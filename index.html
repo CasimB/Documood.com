@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+    <title>Documood</title>
+</head>
+
+<body>
+
+    <main>
+
+        <section id="First-Section">
+            <div class="container">
+                <div class="header-box">
+                    <div class="img-box">
+                        <img src="assest/image/logo.png" alt="">
+                    </div>
+                    <div class="social-media">
+                        <ul>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Linkedin</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="documents">
+                    <h1>
+                        Create your
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">Documents</div>
+                                <div class="swiper-slide">File</div>
+                                <div class="swiper-slide">Folder</div>
+                                <div class="swiper-slide">Description</div>
+                            </div>
+                        </div>
+                        with one touch
+                    </h1>
+                    <p>
+                        Documood is a platform for you to easily create and sign your contracts.
+                    </p>
+                    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+                    <a href="javascript:void(0)">
+                        <span>Be an investor</span>
+                        <div class="wave"></div>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="Container">
+                <div class="first-box">
+                    <h2>Contracts</h2>
+                    <p>Sign your contracts online with one click. Then, create arrangements without wasting time with
+                        contract.</p>
+                    <img src="assest/image/ipad.png" alt="">
+                </div>
+                <div class="second-box">
+                    <h2>Cloud Technology</h2>
+                    <p>With cloud technology, you can make joint changes to contracts and constantly monitor your
+                        documents.</p>
+                    <img src="assest/image/ipadpro.png" alt="">
+                </div>
+            </div>
+
+        </section>
+
+        <section id="About-us">
+
+            <div class="container">
+
+                <div class="Text-box">
+                    <div>
+                        <h2>About Us</h2>
+                        <p>Documood's goal is to help both small and large businesses grow digitally. However, the
+                            management and processing of cloud-based contracts and sensitive data is a concern for many
+                            companies. </p>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <div></div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- gmail -->
+        <section id="Investor-Team">
+            <div class="container">
+
+                <div class="first-box">
+
+                    <h2>To be an<span>&nbsp;investor</span></h2>
+                    <p>Documood's goal is to help both small and large businesses grow digitally. However, the
+                        management and processing of cloud-based contracts.</p>
+
+                </div>
+
+                <div class="second-box">
+                    
+
+                    <div class="second">
+                        
+                        <div class="form">
+                            <form method="post">
+                                <div>
+                                    <div>
+                                        <h3>Name Surname</h3>
+                                        <input type="text" placeholder="John Doe" id="name" autocomplete="off">
+                                    </div>
+                                    <div>
+                                        <h3>Country to investment</h3>
+                                        <input type="text" placeholder="Select Country" id="Country" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <h3>Phone</h3>
+                                        <input type="number" placeholder="Your Number   (+994)" id="Number"
+                                            autocomplete="off">
+                                    </div>
+                                    <div>
+                                        <h3>E-mail</h3>
+                                        <input type="email" placeholder="email" id="email" autocomplete="off">
+                                    </div>
+                                </div>
+                                <h3>Message</h3>
+                                <textarea id="message" placeholder="message" cols="30" rows="10"></textarea>
+
+                                <div class="button-box">
+                                    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+                                        rel="stylesheet">
+
+                                    <a href="javascript:void(0)" id="btn">
+                                        <span>Be an investor</span>
+                                        <div class="wave"></div>
+                                    </a></div>
+
+                            </form>
+                        </div>
+                        <script>
+                            let btn = document.getElementById('btn');
+                            btn.addEventListener('click', function (e) {
+                                e.preventDefault()
+                                let name = document.getElementById('name').value;
+                                let email = document.getElementById('email').value;
+                                let number = document.getElementById('Number').value;
+                                let message = document.getElementById('message').value;
+                                let body = 'name:' + name + '<br/> email:' + email + '<br/> Number' +
+                                    number +
+                                    '<br/> message' + message;
+
+
+                                Email.send({
+                                    Host: "smtp.elasticemail.com",
+                                    Port: "2525",
+                                    Username: "contact@documood.com",
+                                    Password: "FAF4DB58A6A53787F97BAD46F185AD3DCC4A",
+                                    To: 'contact@documood.com',
+                                    From: document.getElementById("email").value,
+                                    Subject: "new contact form enquriy",
+                                    Body: 'and this is the body'
+                                }).then(
+                                    message => alert(message)
+                                );
+                            })
+                        </script>
+                        <script src="https://smtpjs.com/v3/smtp.js"></script>
+                    </div>
+
+                    <!-- <div class="third">
+                            <div>
+                                <h3>Name Surname</h3>
+                                <textarea id="message" placeholder="Leave your message..." cols="30"
+                                    rows="10"></textarea>
+                                <div class="button-box">
+                                    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+                                        rel="stylesheet">
+
+                                    <a href="javascript:void(0)">
+                                        <span>Be an investor</span>
+                                        <div class="wave"></div>
+                                    </a></div>
+                            </div>
+                        </div> -->
+
+                </div>
+            </div>
+
+            <div class="Container">
+                <div class="team">
+                    <div class="text">
+                        <div>
+                            <h2>Meet our<span>&nbsp;team</span></h2>
+                            <p>Documood's goal is to help both small and large businesses grow digitally. However, the
+                                management and processing of cloud-based contracts and sensitive data is a concern for
+                                many companies. </p>
+                        </div>
+                    </div>
+
+                    <div class="photo-box">
+                        <div>
+                            <div class="img">
+                                <img src="assest/image/team-first.png" alt="">
+                            </div>
+                            <h3>Name Surname</h3>
+                            <span>UI/UX Designer</span>
+
+                        </div>
+                        <div>
+                            <div class="img">
+                                <img src="assest/image/team-second.png" alt="">
+                            </div>
+                            <h3>Name Surname</h3>
+                            <span>UI/UX Designer</span>
+
+                        </div>
+                        <div>
+                            <div class="img">
+                                <img src="assest/image/team-first.png" alt="">
+                            </div>
+                            <h3>Name Surname</h3>
+                            <span>UI/UX Designer</span>
+
+                        </div>
+                        <div>
+                            <div class="img">
+                                <img src="assest/image/team-second.png" alt="">
+                            </div>
+                            <h3>Name Surname</h3>
+                            <span>UI/UX Designer</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="Footer-section">
+
+            <div class="container">
+                <div class="first">
+                    <h3>For additional information just mail us</h3>
+                    <a href="#">sayhello@documood.ccom</a>
+                </div>
+                <div class="second">
+                    <h3>© Documood 2022 | All Rights Reserved </h3>
+                    <button id="scrollToTopBtn"><img src="assest/image/arrow-up.png" alt=""></button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
